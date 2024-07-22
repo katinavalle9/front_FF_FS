@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import RoutesIndex from "./routes/index";
+import RoutesIndex from "./routes/Index.jsx";
 import { SearchProvider } from "./context/SearchContex";
 import { AuthProvider } from "./context/AuthContext";
 

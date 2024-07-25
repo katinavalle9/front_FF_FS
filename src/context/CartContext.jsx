@@ -21,7 +21,7 @@ export const CartProvider = ({ children }) => {
 
   const addToCart = (item, quantityToAdd) => {
     setCartItems((prevItems) => {
-      const existingItemIndex = prevItems.findIndex((i) => i.id === item.id);
+      const existingItemIndex = prevItems.findIndex((i) => i.id === item._id);
       if (existingItemIndex > 0) {
         return prevItems.map((i, index) =>
           index === existingItemIndex
@@ -30,7 +30,7 @@ export const CartProvider = ({ children }) => {
         );
       } else {
         const newItem = {
-          id: item.id,
+          id: item._id,
           name: item.name,
           price: item.price,
           quantity: quantityToAdd,

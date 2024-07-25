@@ -16,7 +16,9 @@ const Cart = () => {
   };
 
   const handleRemoveItem = (id) => {
+    console.log("Eliminar producto con id:", id);
     const updatedCartItems = cartItems.filter((item) => item.id !== id);
+    console.log("Carrito actualizado:", updatedCartItems);
     setCartItems(updatedCartItems);
     localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
   };
